@@ -29,6 +29,7 @@
     </head>
     <body>
     <div id="map"></div>
+    <div id='searchContainer' style="position: fixed;"></div>
       <script type="text/javascript">
           var m= L.map('map').setView([58.3934, 13.851], 15);
           m.addControl(L.control.zoom({position: 'topright'}));
@@ -48,7 +49,7 @@ function popUp(f,l){
     }
 }
                 var options = {
-                    geojsonServiceAddress: "./testgeojsondata.json"
+                    geojsonServiceAddress: "./stationer.geojson"
                               };
                                 $("#searchContainer").GeoJsonAutocomplete(options);
                               
