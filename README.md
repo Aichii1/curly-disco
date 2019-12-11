@@ -63,6 +63,14 @@ geojsonLayer.refilter(function(feature){
 
 Behind the scenes are two new classes L.Util.ajax = function (url) for same origin requests and L.Util.jsonp = function (url,options) cross origin ones. Both return promises, which have an additional abort method that will abort the ajax request.
 
+
+
+
+
+https://github.com/utahemre/Leaflet.GeoJSONAutocomplete 
+
+Ref for autocomplete search 
+
 ```js
 L.Util.ajax("url/same/origin.xml").then(function(data){
 	doStuff(data);
