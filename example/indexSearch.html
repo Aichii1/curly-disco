@@ -31,6 +31,7 @@
     <div id="map"></div>
     <div id='searchContainer' style="position: fixed;"></div>
       <script type="text/javascript">
+          Window.map = new L.Map('map');
           var m= L.map('map').setView([58.3934, 13.851], 15);
           m.addControl(L.control.zoom({position: 'topright'}));
 var mopt = {
