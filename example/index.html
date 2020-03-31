@@ -22,7 +22,7 @@
 
 
 
-    <title>Nätstationer - Leaflet</title>
+    <title>Koncessionsgräns Skövde Energi - Leaflet</title>
     </head>
     <body>
     <div id="map"></div>
@@ -40,16 +40,16 @@ mq.addTo(m);
 
 
 
-function popUp(f,l){
-    var out = [];
-    if (f.properties){
-        for(key in f.properties){
-            out.push(key+": "+f.properties[key]);
-        }
-        l.bindPopup(out.join("<br />"));
-    }
-}
-var jsonTest = new L.GeoJSON.AJAX(["Koncessionsgrans.geojson"],{onEachFeature:popUp}).addTo(m);
+///function popUp(f,l){
+///    var out = [];
+///    if (f.properties){
+///        for(key in f.properties){
+///            out.push(key+": "+f.properties[key]);
+///        }
+///        l.bindPopup(out.join("<br />"));
+///    }
+///}
+var jsonTest = new L.GeoJSON.AJAX(["Koncessionsgrans.geojson"].addTo(m);
 </script>
 
 
