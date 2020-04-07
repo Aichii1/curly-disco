@@ -4,7 +4,24 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <link rel="shortcut icon" href="./favicon.ico">
-			<title>Signal Schema</title>
+		
+		<script>
+  function fetchCookies(requestMethod) {
+    var req = new XMLHttpRequest();
+    req.withCredentials = true;
+    req.responseType = 'json';
+    req.open(requestMethod, "https://samesite-sandbox.glitch.me/cookies.json", true);
+    req.onload  = function() {
+       var jsonResponse = { method: requestMethod, cookies: req.response };
+       window.parent.postMessage(jsonResponse, "https://samesite-sandbox.glitch.me");
+    };
+    req.send(null);
+  }
+  
+  fetchCookies('GET');
+</script>
+		
+		<title>Signal Schema</title>
 	</head>
 		<body>
     	
